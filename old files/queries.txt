@@ -1,0 +1,12 @@
+
+
+
+SELECT * FROM `rooms` WHERE  type = 'single' AND (status = 0 OR check_in_date NOT BETWEEN 15-4-2015 AND 16-4-2015)
+
+
+SELECT * FROM `rooms`,`rooms_availability` WHERE type = 'single' AND rooms_availability.status='available' OR date <> 2015-04-17
+
+
+SELECT * FROM `rooms` R INNER JOIN `rooms_availability` RA ON R.room_no = RA.room_no WHERE R.type = 'single' AND (RA.in_date <> '2015-04-17' AND RA.out_date <> '2015-04-18')
+
+wa
